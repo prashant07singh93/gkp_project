@@ -1,0 +1,11 @@
+credentials        = "./terraform-gke-keyfile.json" # service account json file name & path
+project_id         = "agile-rookery-353921"               # make sure you enter your project id from gcp
+region             = "us-central1"                     # region where you wanna create in
+zones              = ["us-central1-a", "us-central1-b", "us-central1-c"] # zone
+name               = "terraform-gke"                  # name of your cluster  
+machine_type       = "n1-standard-1"               # type of compute size
+min_count          = 1
+max_count          = 3
+disk_size_gb       = 10
+service_account    = "terraform-gke@agile-rookery-353921.iam.gserviceaccount.com" # service account name which we created
+initial_node_count = 3
